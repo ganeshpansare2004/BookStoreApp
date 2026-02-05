@@ -1,0 +1,79 @@
+[
+    {
+        "id" : 1,
+        "name" :"Story Book",
+        "title" : "Between the Last Page and the Next Beginning",
+        "price" : 0,
+        "category" :"Free",
+        "image" :"../public/hand-drawn-flat-design-stack-books-illustration.png"
+    },
+    {
+        "id" : 2,
+        "name" :"Comedy Book",
+        "title" : "Between the Last Page and the Next Beginning",
+        "price" : 20,
+        "category" :"Entertaiment",
+        "image" :"../public/hand-drawn-flat-design-stack-books-illustration.png"
+    },
+    {
+        "id" : 3,
+        "name" :"Sports Book",
+        "title" : "Between the Last Page and the Next Beginning",
+        "price" : 50,
+        "category" :"Sports",
+        "image" :"../public/hand-drawn-flat-design-stack-books-illustration.png"
+    },
+    {
+        "id" :5,
+        "name" :"Music Book",
+        "title" : "Between the Last Page and the Next Beginning",
+        "price" : 100,
+        "category" :"Song",
+        "image" :"../public/hand-drawn-flat-design-stack-books-illustration.png"
+    },
+    {
+        "id" : 6,
+        "name" :"Food Book",
+        "title" : "Between the Last Page and the Next Beginning",
+        "price" : 200,
+        "category" :"Food",
+        "image" :"../public/hand-drawn-flat-design-stack-books-illustration.png"
+    },
+    {
+        "id" : 7,
+        "name" :"Story Book",
+        "title" : "Between the Last Page and the Next Beginning",
+        "price" : 0,
+        "category" :"Free",
+        "image" :"../public/hand-drawn-flat-design-stack-books-illustration.png"
+    },
+    {
+        "id" : 8,
+        "name" :"Story Book",
+        "title" : "Between the Last Page and the Next Beginning",
+        "price" : 0,
+        "category" :"Free",
+        "image" :"../public/hand-drawn-flat-design-stack-books-illustration.png"
+    },
+     {
+        "id" : 9,
+        "name" :"Story Book",
+        "title" : "Between the Last Page and the Next Beginning",
+        "price" : 0,
+        "category" :"Free",
+        "image" :"../public/hand-drawn-flat-design-stack-books-illustration.png"
+    },
+     {
+        "id" : 10,
+        "name" :"Story Book",
+        "title" : "Between the Last Page and the Next Beginning",
+        "price" : 0,
+        "category" :"Free",
+        "image" :"../public/hand-drawn-flat-design-stack-books-illustration.png"
+    }
+
+
+]
+
+
+
