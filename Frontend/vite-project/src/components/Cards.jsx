@@ -3,9 +3,8 @@ import React from 'react'
 function Cards({ item }) {
   return (
     <div className="mt-4 my-3 p-3 h-full">
-      <div className="card bg-base-100 w-full shadow-sm h-full flex flex-col
-border border-white dark:border-base-300 hover:scale-105 duration-300">
-
+      <div className="card bg-base-100 text-base-content w-auto shadow-sm h-auto flex flex-col
+      border border-base-300 hover:scale-105 duration-300">
 
         <figure>
           <img src={item.image} alt={item.name} />
@@ -16,12 +15,13 @@ border border-white dark:border-base-300 hover:scale-105 duration-300">
           <div>
             <h2 className="card-title">
               {item.name}
-              <div className="badge badge-secondary">
+
+              <div className="badge badge-secondary text-white">
                 {item.category}
               </div>
             </h2>
 
-            <p className="line-clamp-2">
+            <p className="line-clamp-2 opacity-80">
               {item.title}
             </p>
           </div>

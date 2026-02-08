@@ -2,9 +2,9 @@ import React from 'react'
 
 function footer() {
   return (
-    <div className="mt-10">
-    <hr className="mb-10" />
-    <footer className="footer footer-horizontal footer-center text-base-content rounded p-10">
+    <div>
+    <hr className='bg-base-100 text-base-content'/>
+    <footer className="footer footer-horizontal footer-center text-base-content rounded p-10 bg-base-100 text-base-content">
 
   <nav className="grid grid-flow-col gap-4">
     <a className="link link-hover">About us</a>

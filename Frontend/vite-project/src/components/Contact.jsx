@@ -11,7 +11,7 @@ const Contact = () => {
       const onSubmit = (data) => console.log(data)
   return (
     <>
-      <div className='flex h-screen items-center justify-center '>
+      <div className='flex h-screen items-center justify-center bg-base-100 text-base-content'>
         <div className="  modal modal-open border-[2px] shadow-md p-5 rounded-md">
   <div className="modal-box">
     <form  onSubmit={handleSubmit(onSubmit)} method="dialog">
