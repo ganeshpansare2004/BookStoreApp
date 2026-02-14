@@ -4,6 +4,7 @@ import Banner from '../components/banner'
 import Freebook from '../components/Freebook'
 import Footer from '../components/footer'
 
+
 function Home() {
   return (
    <>
@@ -11,6 +12,7 @@ function Home() {
        <Banner/>
        <Freebook/>
        <Footer />
+      
    </>
   )
 }

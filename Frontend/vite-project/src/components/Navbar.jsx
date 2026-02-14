@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
 import Logout from "./Logout";
-import {useAuth} from "../context/AuthContext.js"
+import {useAuth} from "../context/AuthContext.js";
+import { Link } from "react-router-dom";
+
+
 
 
 function Navbar() {
   const [authUser ] =useAuth()
-  // console.log(authUser)
+ 
   
   const [sticky, setSticky] = useState(false);
   const [theme, setTheme] = useState(
@@ -22,7 +25,6 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // DaisyUI theme handler
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
@@ -30,10 +32,18 @@ function Navbar() {
 
   const navItems = (
     <>
-      <li><a href="/" className="text-base-content">Home</a></li>
-      <li><a href="/course" className="text-base-content">Course</a></li>
-      <li><a href="/contact" className="text-base-content">Contact</a></li>
-      <li><a className="text-base-content">About</a></li>
+     <li>
+      <Link to="/" className="text-base-content">Home</Link>
+    </li>
+    <li>
+      <Link to="/course" className="text-base-content">Course</Link>
+    </li>
+    <li>
+      <Link to="/contact" className="text-base-content">Contact</Link>
+    </li>
+    <li>
+      <Link to="/about" className="text-base-content">About</Link>
+    </li>
     </>
   );
 
@@ -42,10 +52,10 @@ function Navbar() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
       ${sticky ? "bg-base-200 shadow-md" : "bg-base-100"}`}
     >
-      {/* CENTERED CONTENT */}
+    
       <div className="navbar max-w-screen-2xl mx-auto md:px-20 px-4">
 
-        {/* LEFT */}
+        
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -61,21 +71,19 @@ function Navbar() {
           </div>
 
           <a className="text-2xl font-bold cursor-pointer text-base-content">
-            readNexa
+            .read<span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent font-extrabold">N</span>exa
           </a>
         </div>
 
-        {/* CENTER */}
+        
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-base-content">
             {navItems}
           </ul>
         </div>
 
-        {/* RIGHT */}
         <div className="navbar-end space-x-3">
 
-          {/* Search */}
           <div className="hidden md:block">
             <label className="px-3 py-2 flex items-center gap-2 text-base-content">
               <svg className="h-4 w-4 opacity-60" xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +101,7 @@ function Navbar() {
             </label>
           </div>
 
-          {/* THEME TOGGLE */}
+      
           <label className="swap swap-rotate cursor-pointer text-base-content">
             <input
               type="checkbox"
@@ -103,20 +111,43 @@ function Navbar() {
               }
             />
 
-            {/* Sun */}
-            <svg className="swap-off h-6 w-6 fill-current"
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M12 4V2m0 20v-2m10-8h-2M4 12H2m15.36 6.36-1.42-1.42
-              M8.06 7.06 6.64 5.64m12.72 0-1.42 1.42
-              M8.06 16.94l-1.42 1.42M12 8a4 4 0 1 0 0 8Z"/>
-            </svg>
+  
+           <svg
+  className="swap-off h-6 w-6 text-yellow-500"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+  strokeWidth="2"
+>
+  <circle cx="12" cy="12" r="5" />
+  <line x1="12" y1="1" x2="12" y2="3" />
+  <line x1="12" y1="21" x2="12" y2="23" />
+  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+  <line x1="1" y1="12" x2="3" y2="12" />
+  <line x1="21" y1="12" x2="23" y2="12" />
+  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+</svg>
 
-            {/* Moon */}
-            <svg className="swap-on h-6 w-6 fill-current"
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3
-              7 7 0 0 0 21 12.79z"/>
-            </svg>
+{/* moon */}
+          <svg
+  className="swap-on h-6 w-6"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+  strokeWidth="2"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M20.354 15.354A9 9 0 1 1 8.646 3.646
+       7 7 0 0 0 20.354 15.354z"
+  />
+</svg>
+
           </label>
           {
             authUser?(<Logout/>):(
